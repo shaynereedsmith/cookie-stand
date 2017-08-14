@@ -4,12 +4,22 @@ var storeOne = {
   location: '1st and Pike',
   minCust: 23,
   maxCust: 65,
-  avgCookieSales: 6.3
+  avgCookieSales: 6.3,
 
-  method: function() {
-    //generate a random number of customers per hour
-    //Calculate and store amounts of cookies purchased for each hour using average cookies purchased and the random number of customers generated
-    
+  genRandomCust: function() {
+    return Math.floor(Math.random() * this.maxCust - this.minCust) + this.minCust;
+  }
+};
+
+//3. Calculate and store amounts of cookies purchased for each hour using average cookies purchased and the random number of customers generated
+//4. Store the results for each location in a separate array... perhaps as a property of the object representing that location
+//5. Display the values of each array as unordered lists in the browser
+//
+
+var hotel = {
+  name: 'hotel name',
+  checkName: function() {
+    return this.name;
   }
 };
 
