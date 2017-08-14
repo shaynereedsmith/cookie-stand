@@ -5,6 +5,12 @@ var storeOne = {
   minCust: 23,
   maxCust: 65,
   avgCookieSales: 6.3
+
+  method: function() {
+    //generate a random number of customers per hour
+    //Calculate and store amounts of cookies purchased for each hour using average cookies purchased and the random number of customers generated
+    
+  }
 };
 
 var storeTwo = {
