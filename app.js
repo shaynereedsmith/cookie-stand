@@ -5,10 +5,15 @@ var storeOne = {
   minCust: 23,
   maxCust: 65,
   avgCookieSales: 6.3,
+  hoursPerDay: ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
+  salesPerHour: function(avgCookieSales, minCust, maxCust) {
+    var random = (Math.floor(Math.random() * this.maxCust - this.minCust) + this.minCust);
+    var salesPerHour = this.avgCookieSales * random;
+    return salesPerHour;
+  },
 
-  genRandomCust: function() {
-    return Math.floor(Math.random() * this.maxCust - this.minCust) + this.minCust;
-  }
+  //operation to calculate aounts of cookies purchased per hour using average cookies purchased (avgCookieSales) and random number of
+  //variable to store the operation
 };
 
 //3. Calculate and store amounts of cookies purchased for each hour using average cookies purchased and the random number of customers generated
