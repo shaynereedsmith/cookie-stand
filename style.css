@@ -1,24 +1,34 @@
 body {
   margin: 0;
+  background: #835b32;
 }
 
 .header {
   background: #00d8c8;
-  height: 20em;
+  height: 15em;
 }
 
 .title {
+  padding: 2em;
   color: white;
-   position: absolute;
-   top: 2em;
-   left: 3em;
-   width: 100%;
 }
 
-h1 {
+.headline {
   font-family: Quicksand, sans-serif;
   font-size: 3em;
-  color: #835b32;
+  color: white;
+}
+
+h2 {
+  color: #009085;
+  padding-left: 2em;
+  font-family: sans-serif;
+}
+
+.bioHeadline {
+  font-family: Quicksand, sans-serif;
+  font-size: 2em;
+  color: #00d8c8;
 }
 
 .floatLeft {
@@ -27,4 +37,54 @@ h1 {
 
 .floatRight {
   float: right;
+}
+
+.bio {
+  width: 55%;
+  margin-left: 4em;
+}
+
+.bioP {
+  font-family: Georgia;
+  color: white;
+  padding-left: 1em;
+  padding-right: 3em;
+}
+
+aside {
+  padding-top: 4em;
+  margin-right: 4em;
+}
+
+.circle {
+  display: inline-block;
+  text-align: center;
+  background: #00d8c8;
+  border-radius: 100%;
+  height: 5em;
+  width: 5em;
+}
+
+.locations {
+  font-family: Georgia;
+  width: 70%;
+  background: white;
+  border-radius: 10px;
+  padding: 0.5em;
+  color: #009085;
+}
+
+.verticalBreak {
+  height: 3em;
+  clear: both;
+}
+
+.footerLine {
+  width: 60%;
+  border-top: 10px dotted #00d8c8;
+  margin: auto;
+}
+
+footer {
+  text-align: center;
 }
