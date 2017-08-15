@@ -156,57 +156,18 @@ for (var j; j < cookieStand4.hourlyCookiesSold.length; j++) {
 totalLi.innerText = 'Total:' + sumOne + ' cookies';
 newLi.appendChild(totalLi);
 
-//-------- Capitol Hill --------
-
-var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-
-var cookieStand4 = {
-  location: 'Capitol Hill',
-  minHourlyCust:  20,
-  maxHourlyCust: 38,
-  avgDailyCustomersHr: function() {
-    return Math.floor(Math.random() * (this.maxHourlyCust - this.minHourlyCust) + this.minHourlyCust);
-  },
-  avgCookiesPerSale: 2.3,
-  hourlyCookiesSold: [],
-  hourlyCookiesSoldRate: function() {
-    for (var i = 0; i < hours.length; i++) {
-      var product = this.avgCookiesPerSale * this.avgDailyCustomersHr();
-      this.hourlyCookiesSold.push(Math.round(product));
-    }
-  }
-};
-
-var stores = document.getElementById('storeList4');
-stores.textContent = cookieStand4.location;
-
-cookieStand4.hourlyCookiesSoldRate();
-for (var i = 0; i < hours.length; i++) {
-  var newLi = document.createElement('li');
-  newLi.innerText = hours[i] + ': ' + cookieStand4.hourlyCookiesSold[i] + ' cookies sold.';
-  storeList4.appendChild(newLi);
-}
-
-var totalLi = document.createElement('li');
-var sumOne = 0;
-for (var j; j < cookieStand4.hourlyCookiesSold.length; j++) {
-  sumOne = sumOne + cookieStand4.hourlyCookiesSold[j];
-}
-totalLi.innerText = 'Total:' + sumOne + ' cookies';
-newLi.appendChild(totalLi);
-
 //-------- Alki --------
 
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 var cookieStand5 = {
   location: 'Alki',
-  minHourlyCust:  20,
-  maxHourlyCust: 38,
+  minHourlyCust:  2,
+  maxHourlyCust: 16,
   avgDailyCustomersHr: function() {
     return Math.floor(Math.random() * (this.maxHourlyCust - this.minHourlyCust) + this.minHourlyCust);
   },
-  avgCookiesPerSale: 2.3,
+  avgCookiesPerSale: 4.6,
   hourlyCookiesSold: [],
   hourlyCookiesSoldRate: function() {
     for (var i = 0; i < hours.length; i++) {
@@ -233,14 +194,3 @@ for (var j; j < cookieStand5.hourlyCookiesSold.length; j++) {
 }
 totalLi.innerText = 'Total:' + sumOne + ' cookies';
 newLi.appendChild(totalLi);
-
-
-/*
-
-var storeFive = {
-  location: 'Alki',
-  minCust: 2,
-  maxCust: 16,
-  avgCookieSales: 4.6
-};
-*/
