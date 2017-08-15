@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+}
+
+.header {
+  background: #00d8c8;
+  height: 20em;
+}
+
+.title {
+  color: white;
+   position: absolute;
+   top: 2em;
+   left: 3em;
+   width: 100%;
+}
+
+h1 {
+  font-family: Quicksand, sans-serif;
+  font-size: 3em;
+  color: #835b32;
+}
+
+.floatLeft {
+  float: left;
+}
+
+.floatRight {
+  float: right;
+}
