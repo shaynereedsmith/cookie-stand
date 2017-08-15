@@ -1,5 +1,57 @@
 'use strict';
 
+var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
+
+function Store(name, minCust, maxCust, avgCookies) {
+  this.name = name;
+  this.minCust = minCust;
+  this.maxCust = maxCust;
+  this.avgCookies = avgCookies;
+  this.simCookies = [];
+  //this.totalCookiesSales = totalCookiesSales;
+  this.randomCustomersPerHour = function() {
+    return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+  };
+  this.eachHourSales = function(){
+    this.simCookies = [];
+    this.totalCookieSales = 0;
+    for (var i = 0; i < this.storeHours.length; i++) {
+      var hourlyCookieSales = Math.ceil(this.avgCookies * this.randomCustomersPerHour());
+      this.simCookies.push(hourlyCookieSales);
+      this.totalCookieSales += hourlyCookieSales;
+    }
+  };
+};
+
+function dailySalesReport(){
+  Store.eachHourSales(); // generates the sales we need
+  var location = document.getElementById('sales-section');
+  var locationName = document.createElement('h2');
+  locationName.innerText = Store.name;
+  location.appendChild(locationName);
+
+  var list = document.createElement('ul');
+  location.appendChild(list);
+
+  for (var i = 0; i < Store.storeHours.length; i++) { // for each hour do some stuff
+    // Store block of code creates a child element for "list"
+    var listItems = document.createElement('li');
+    listItems.innerText = Store.storeHours[i] + ': ' + Store.simCookies[i] + ' cookies';
+    list.appendChild(listItems); // adds the new list item to the unordered list
+  }
+  var listItems = document.createElement('li');
+  listItems.innerText = 'Total: ' + Store.totalCookieSales + ' cookies';
+  list.appendChild(listItems);
+}
+
+var Pike = new Store('1st and Pike', 23, 65, 6.3);
+var Seatac = new Store('SeaTac Airport', 3, 24, 1.2);
+var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);
+var capitolHill = new Store('Capitol Hill', 20, 38, 2.3);
+var Alki = new Store('Alki', 2, 16, 4.6);
+
+Pike;
+/*
 var pike = {
   storeHours: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'],
   name: '1st and Pike',
@@ -53,6 +105,7 @@ var pike = {
     list.appendChild(listItems);
   }
 };
+
 var seatac = {
   storeHours: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'],
   name: 'SeaTac Airport',
@@ -286,3 +339,4 @@ for (var i = 0; i < stores.length; i++) {
 // create a new variable for new list items
 // change the inner text of new list item to be values of the storeHours array
 // append the new list item to our selected list
+*/
