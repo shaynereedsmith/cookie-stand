@@ -12,6 +12,7 @@ function Store(name, minCust, maxCust, avgCookies) {
   this.randomCustomersPerHour = function() {
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
   };
+
   this.eachHourSales = function(){
     this.simCookies = [];
     this.totalCookieSales = 0;
@@ -21,6 +22,8 @@ function Store(name, minCust, maxCust, avgCookies) {
       this.totalCookieSales += hourlyCookieSales;
     }
   };
+
+  // TABLE BODY
   this.dailySalesReport = function(){
     this.eachHourSales();
     var rowContainer = document.getElementsByTagName('table')[0];
@@ -38,6 +41,7 @@ function Store(name, minCust, maxCust, avgCookies) {
     listItems.innerText = 'Total: ' + this.totalCookieSales + ' cookies';
     rows.appendChild(listItems);
   };
+
   storeNames.push(this);
 };
 
@@ -55,6 +59,7 @@ function tableHead() {
     headerHours.innerText = storeHours[i];
     tableRow.appendChild(headerHours);
   }
+
   var topRight = document.createElement('th');
   topRight.innerText = 'Daily Location Total';
   tableRow.appendChild(topRight);
@@ -73,6 +78,7 @@ function tableFoot() {
     daySum.innerText = ' ';
     footerTable.appendChild(daySum);
   }
+
   var rightBottom = document.createElement('th');
   rightBottom.innerText = ' ';
   footerTable.appendChild(rightBottom);
