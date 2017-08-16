@@ -23,7 +23,7 @@ function Store(name, minCust, maxCust, avgCookies) {
   };
   this.dailySalesReport = function(){
     this.eachHourSales();
-    var rowContainer = document.getElementById('sales-section');
+    var rowContainer = document.getElementsByTagName('table')[0];
     var rows = document.createElement('tr');
     rowContainer.appendChild(rows);
     var leftColumn = document.createElement('th');
@@ -41,39 +41,41 @@ function Store(name, minCust, maxCust, avgCookies) {
   storeNames.push(this);
 };
 
+// HEADER
 function tableHead() {
   var headerGenisis = document.getElementById('sales-section');
   var headerTable = document.createElement('table');
   headerGenisis.appendChild(headerTable);
   var tableRow = document.createElement('tr');
   headerTable.appendChild(tableRow);
-  var topRight = document.createElement('td');
-  tableRow.appendChild(topRight);
+  var topLeft = document.createElement('td');
+  tableRow.appendChild(topLeft);
   for (var i = 0; i < storeHours.length; i++) {
     var headerHours = document.createElement('th');
-    headerHours.insertText = storeHours[i];
+    headerHours.innerText = storeHours[i];
     tableRow.appendChild(headerHours);
   }
-  var topLeft = document.createElement('th');
-  topRight.insertText = 'Daily Location Total';
+  var topRight = document.createElement('th');
+  topRight.innerText = 'Daily Location Total';
   tableRow.appendChild(topRight);
 };
 
+// FOOTER
 function tableFoot() {
-  var footerGenisis = document.getElementById('sales-section');
-  var footRow = documents.createElement('tr');
-  footerGenisis.appendChild(footRow);
-  var rightBottom = document.createElement('th');
-  rightBottom.innerText = 'Total';
-  footRow.appendChild(rightBottom);
+  var footerGenisis = document.getElementsByTagName('table')[0];
+  var footerTable = document.createElement('tr');
+  footerGenisis.appendChild(footerTable);
+  var leftBottom = document.createElement('th');
+  leftBottom.innerText = 'Total';
+  footerTable.appendChild(leftBottom);
   for (var i = 0; i < storeHours.length; i++) {
     var daySum = document.createElement('th');
-    daySum.insertText = ' ';
-    footRow.appendChild(daySum);
+    daySum.innerText = ' ';
+    footerTable.appendChild(daySum);
   }
-  var topLeft = document.createElement('th');
-  topRight.insertText = ' ';
-  footRow.appendChild(rightBottom);
+  var rightBottom = document.createElement('th');
+  rightBottom.innerText = ' ';
+  footerTable.appendChild(rightBottom);
 };
 
 var Pike = new Store('1st and Pike', 23, 65, 6.3);
@@ -82,7 +84,11 @@ var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);
 var capitolHill = new Store('Capitol Hill', 20, 38, 2.3);
 var Alki = new Store('Alki', 2, 16, 4.6);
 
+tableHead();
+
 for(var i = 0; i < storeNames.length; i++) {
   storeNames[i].eachHourSales();
   storeNames[i].dailySalesReport();
 }
+
+tableFoot();
