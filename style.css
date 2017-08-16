@@ -88,3 +88,11 @@ aside {
 footer {
   text-align: center;
 }
+
+table {
+  border: 1px solid black;
+}
+
+tr td th * {
+  border: 1px solid black;
+}

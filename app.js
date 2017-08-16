@@ -22,26 +22,58 @@ function Store(name, minCust, maxCust, avgCookies) {
     }
   };
   this.dailySalesReport = function(){
-    this.eachHourSales(); // generates sales
-    var location = document.getElementById('sales-section');
-    var locationName = document.createElement('h2');
-    locationName.innerText = this.name;
-    location.appendChild(locationName);
-
-    var list = document.createElement('ul');
-    location.appendChild(list);
-
-    for (var i = 0; i < storeHours.length; i++) { // for each hour do some stuff
-      // this block of code creates a child element for "list"
-      var listItems = document.createElement('li');
-      listItems.innerText = storeHours[i] + ': ' + this.simCookies[i] + ' cookies';
-      list.appendChild(listItems); // adds the new list item to the unordered list
+    this.eachHourSales();
+    var rowContainer = document.getElementById('sales-section');
+    var rows = document.createElement('tr');
+    rowContainer.appendChild(rows);
+    var leftColumn = document.createElement('th');
+    leftColumn.innerText = this.name;
+    rows.appendChild(leftColumn);
+    for (var i = 0; i < this.simCookies.length; i++) {
+      var byHour = document.createElement('td');
+      byHour.innerText = this.simCookies[i];
+      rows.appendChild(byHour);
     }
-    var listItems = document.createElement('li');
+    var listItems = document.createElement('td');
     listItems.innerText = 'Total: ' + this.totalCookieSales + ' cookies';
-    list.appendChild(listItems);
+    rows.appendChild(listItems);
   };
   storeNames.push(this);
+};
+
+function tableHead() {
+  var headerGenisis = document.getElementById('sales-section');
+  var headerTable = document.createElement('table');
+  headerGenisis.appendChild(headerTable);
+  var tableRow = document.createElement('tr');
+  headerTable.appendChild(tableRow);
+  var topRight = document.createElement('td');
+  tableRow.appendChild(topRight);
+  for (var i = 0; i < storeHours.length; i++) {
+    var headerHours = document.createElement('th');
+    headerHours.insertText = storeHours[i];
+    tableRow.appendChild(headerHours);
+  }
+  var topLeft = document.createElement('th');
+  topRight.insertText = 'Daily Location Total';
+  tableRow.appendChild(topRight);
+};
+
+function tableFoot() {
+  var footerGenisis = document.getElementById('sales-section');
+  var footRow = documents.createElement('tr');
+  footerGenisis.appendChild(footRow);
+  var rightBottom = document.createElement('th');
+  rightBottom.innerText = 'Total';
+  footRow.appendChild(rightBottom);
+  for (var i = 0; i < storeHours.length; i++) {
+    var daySum = document.createElement('th');
+    daySum.insertText = ' ';
+    footRow.appendChild(daySum);
+  }
+  var topLeft = document.createElement('th');
+  topRight.insertText = ' ';
+  footRow.appendChild(rightBottom);
 };
 
 var Pike = new Store('1st and Pike', 23, 65, 6.3);
