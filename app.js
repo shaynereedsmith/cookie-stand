@@ -9,6 +9,7 @@ function Store(name, minCust, maxCust, avgCookies) {
   this.maxCust = maxCust;
   this.avgCookies = avgCookies;
   this.simCookies = [];
+
   this.randomCustomersPerHour = function() {
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
   };
