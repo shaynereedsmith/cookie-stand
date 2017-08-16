@@ -13,11 +13,22 @@ tr {
   padding: 0;
   border: 1px solid black;
   background: #617DB3;
-  color: white;
+  color: darkblue;
 }
 
 td {
   border: 1px solid black;
   background: lightgray;
   color: black;
+}
+
+.feildBox {
+  width: 45%;
+
+}
+
+.button {
+  background: aqua;
+  border: 1px solid black;
+  border-radius: 10px;
 }

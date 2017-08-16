@@ -99,3 +99,5 @@ for(var i = 0; i < storeNames.length; i++) {
 }
 
 tableFoot();
+
+// THIS IS WHERE THE NEW STUFF STARTS
