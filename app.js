@@ -100,24 +100,6 @@ for(var i = 0; i < storeNames.length; i++) {
 
 tableFoot();
 
-// function renderToHTML() {
-//   var nameP = document.getElementById('myName').value;
-//   document.getElementById('nameTest').innerHTML = nameP;
-//   console.log(nameP);
-//
-//   var minCustP = document.getElementById('myMinCust').value;
-//   document.getElementById('minCustTest').innerHTML = minCustP;
-//   console.log(minCustP);
-//
-//   var maxCustP = document.getElementById('myMaxCust').value;
-//   document.getElementById('maxCustTest').innerHTML = maxCustP;
-//   console.log(maxCustP);
-//
-//   var avgCookiesPerHourP = document.getElementById('myCookiesPerHour').value;
-//   document.getElementById('avgCookiesTest').innerHTML = avgCookiesPerHourP;
-//   console.log(avgCookiesPerHourP);
-// };
-
 function harvestAndPost(event){
   event.preventDefault();
   var newStore = new Store();
@@ -129,68 +111,3 @@ function harvestAndPost(event){
 }
 var form = document.getElementById('theForm');
 form.addEventListener('submit', harvestAndPost);
-
-// THIS IS WHERE THE NEW STUFF STARTS
-/*function Post(name, minCust, maxCust, avgCookies){
-  this.name = name;
-  this.minCust = minCust;
-  this.maxCust = maxCust;
-  this.avgCookies = avgCookies;
-  this.simCookies = [];
-
-  this.renderToHTML = function(){
-    // select the body
-    var body = document.getElementsByTagName('table')[0];
-
-    // create the article element and give it a class and attach to the body.
-    var rows = document.createElement('tr');
-    // row.setAttribute('class', 'post');
-    // accomplishes the same as below
-    rows.className = 'rows';
-    body.appendChild(rows);
-    // var postArticle = createAndAppend('article', 'post', '', body);
-
-    // create the title and append it to the article
-    var h2 = document.createElement('h2');
-    h2.innerText = this.title;
-    postArticle.appendChild(h2);
-    // createAndAppend('h2', '', this.title, postArticle);
-
-    // create the author_date p-tag and append it to the article
-    var authorDate = document.createElement('p');
-    authorDate.className = 'author_date';
-    authorDate.innerText = 'By ' + this.author + ' on ' + this.date;
-    postArticle.appendChild(authorDate);
-    // createAndAppend('p', 'author_date', 'By ' + this.author + ' on ' + this.date, postArticle);
-
-    // create the body p-tag and append it to the article
-    var postBody = document.createElement('p');
-    postBody.className = 'post-body';
-    postBody.innerText = this.body;
-    postArticle.appendChild(postBody);
-    // createAndAppend('p', 'post-body', this.body, postArticle);
-  };
-
-  function createAndAppend(toCreate, theClass, theContent, theParent){
-    var theElement = document.createElement(toCreate);
-    if (theClass && theClass !== ''){
-      theElement.className = theClass;
-    }
-    if (theContent && theContent !== ''){
-      theElement.innerText = theContent;
-    }
-    theParent.appendChild(theElement);
-    return theElement;
-  }
-
-  // this.confirmPost = function(){
-  //   var yesNo = confirm('You are about to write this: ' + this.body);
-  //   if (yesNo === true) {
-  //     this.renderToHTML();
-  //   }
-  // };
-  //
-  // this.confirmPost();
-  // this.renderToHTML();
-}
-*/
