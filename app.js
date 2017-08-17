@@ -24,7 +24,6 @@ function Store(name, minCust, maxCust, avgCookies) {
     }
   };
 
-
   storeNames.push(this);
 };
 

@@ -59,6 +59,7 @@ h2 {
 aside {
   padding-top: 4em;
   margin-right: 4em;
+  padding-top: 1em;
 }
 
 .circle {
@@ -71,12 +72,16 @@ aside {
 }
 
 .locations {
+  margin-top: 0;
   font-family: Georgia;
-  width: 70%;
-  background: white;
-  border-radius: 10px;
+  background: #ff6842;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   padding: 0.5em;
-  color: #009085;
+  color: white;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
 }
 
 .verticalBreak {
@@ -103,8 +108,30 @@ legend {
   border: 2px solid white;
 }
 
+.legendP {
+  margin-top: 0;
+  padding: 0;
+  font-family: Quicksand, sans-serif;
+  font-size: 1.2em;
+  color: #00d8c8;
+}
+
+.legendP a {
+  color: #ffd3ae;
+}
+
+.legendP a:hover {
+  color: #ff6842;
+}
+
 fieldset {
   background: white;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   border: none;
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
 }
