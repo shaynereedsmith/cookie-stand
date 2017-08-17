@@ -12,25 +12,32 @@
       <form id="theForm">
         <div class="storeNameStyle">
           <label for="name">Store Name
-          <input type="text" name="name" class="" placeholder="Input Name" required id="" />
+          <input type="text" name="name" class="field" placeholder="Input Name" required />
         </div>
         <div class="minCustPerHour">
           <label for="minCust">Minimum Customers per Hour
-          <input type="number" name="minCust" class="" placeholder="Minimum Customers per Hour" required id="" />
+          <input type="number" name="minCust" class="" placeholder="Minimum Customers per Hour" required />
         </div>
         <div class="maxCustPerHour">
           <label for="maxCust">Maximum Customers per Hour
-          <input type="number" name="maxCust" class="" placeholder="Maximum Customers per Hour" required id="" />
+          <input type="number" name="maxCust" class="" placeholder="Maximum Customers per Hour" required />
         </div>
         <div class="avgCookiesSold">
           <label for="avgCookies">Average Cookies per Customer
-          <input type="number" name="avgCookies" class="" placeholder="Average Cookies per Customer" required id="" />
+          <input type="number" name="avgCookies" class="" placeholder="Average Cookies per Customer" step="0.1" required />
         </div>
         <input type="submit" value="Add store" id="submit" class="button"/>
         </div>
       </form>
       <h2>List of Stores</h2>
+
+    <p id="nameTest"></p>
+    <p id="minCustTest"></p>
+    <p id="maxCustTest"></p>
+    <p id="avgCookiesTest"></p>
+
     <div id="sales-section"></div>
+
  </body>
   <script src="app.js" type="text/javascript" >
  </script>
