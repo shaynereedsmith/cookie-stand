@@ -63,7 +63,6 @@ function dailySalesReport(store){
   var listItems = document.createElement('td');
   listItems.innerText = 'Total: ' + store.totalCookieSales + ' cookies';
   row.appendChild(listItems);
-  // table.appendChild(row);
 };
 
 // FOOTER
