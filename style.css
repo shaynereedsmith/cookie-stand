@@ -32,6 +32,8 @@ h2 {
   font-family: Quicksand, sans-serif;
   font-size: 2em;
   color: #00d8c8;
+  padding-bottom: 1em;
+  border-bottom: 10px dotted #ff6842;
 }
 
 .floatLeft {
@@ -55,8 +57,17 @@ h2 {
 }
 
 .fisBox {
-  background: #ff6842;
-  border: 1px solid black;
+  background: white;
+  border: 2px solid white;
+}
+
+.fishBoxLegend {
+  font-family: Quicksand, sans-serif;
+  font-size: 1.2em;
+  color: black;
+  border: 2px solid white;
+  background: #00d8c8;
+  border-radius: 2em;
 }
 
 aside {
@@ -87,6 +98,10 @@ aside {
   border-right: 2px solid white;
 }
 
+.locations p {
+  padding-left: 0.5em;
+}
+
 .verticalBreak {
   height: 3em;
   clear: both;
@@ -102,7 +117,7 @@ footer {
   text-align: center;
 }
 
-legend {
+.twitterLegend {
   display: inline;
   background: #00d8c8;
   border-radius: 100%;
@@ -127,7 +142,7 @@ legend {
   color: #ff6842;
 }
 
-fieldset {
+.twitter {
   background: white;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -136,10 +151,11 @@ fieldset {
 }
 
 h4 {
-  font-size: 2em;
+  font-size: 1.5em;
   font-family: Quicksand, sans-serif;
   margin: 0;
   background: #00d8c8;
+  padding-left: 0.5em;
 }
 
 .cutter {
@@ -147,4 +163,33 @@ h4 {
   margin-top: 1em;
   border: 1px solid white;
   border-radius: 100%;
+}
+
+nav {
+  font-family: Quicksand, sans-serif;
+  background: #ffd3ae;
+  box-shadow: 0px 0px 10px #888888;
+  height: 1.5em;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ff6842;
+  backgroud: white;
+}
+
+nav a:hover {
+  color: white;
+}
+
+.block1 {
+  margin: 2em;
+}
+
+.block2 {
+  margin: 1em;
+}
+
+article {
+  
 }
