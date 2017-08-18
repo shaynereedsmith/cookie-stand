@@ -20,6 +20,7 @@ body {
   color: white;
   margin: 0;
   width: 58%;
+  text-shadow: 5px 5px #ff6842;
 }
 
 h2 {
@@ -62,6 +63,10 @@ h2 {
   padding: 0;
 }
 
+.fisBox p {
+  padding: 0.5em;
+}
+
 .fishBoxLegend {
   font-family: Quicksand, sans-serif;
   font-size: 1.2em;
@@ -69,10 +74,12 @@ h2 {
   border: 2px solid white;
   background: #00d8c8;
   border-radius: 2em;
+  padding: 0.5em;
 }
 
 .fishBoxImage {
-  border: 2px solid white;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
   border-bottom-right-radius: 10px;
 }
 
@@ -198,5 +205,55 @@ nav a:hover {
 
 article {
   margin: 0;
+  background: #00d8c8;
+}
+
+.articleBody {
   background: #ff6842;
+  font-size: 1.5em;
+  font-family: Quicksand, sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.articleBody p {
+  padding: 1em;
+  background: #00d8c8;
+}
+
+article p {
+  font-family: Georgia;
+  color: white;
+  padding: 2em;
+  margin-bottom: 0;
+  font-size: 1.1em;
+}
+
+.cookie {
+  margin-left: auto;
+  border-radius: 20px;
+  border: 2px solid white;
+  width: 100%;
+}
+
+.clearBoth {
+  clear: both;
+}
+
+.topBorder {
+  border-top: 10px dotted #ff6842;
+  height: 2em;
+  margin-top: 2em;
+}
+
+.fishFoot {
+  float: left;
+}
+
+.fishDiv {
+  margin: 0;
+}
+
+.white {
+  background: white;
 }
