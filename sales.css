@@ -1,34 +1,116 @@
+body {
+  font-family: 'Amatic SC', cursive;
+}
+
+header {
+  text-align: center;
+  background: #00d8c8;
+  margin-top: -1.5em;
+  margin-left: -0.5em;
+  width: 100%;
+  padding: 2em;
+  box-shadow: 0px 0px 10px #888888;
+}
+
+h1 {
+  color: #ff6842;
+  font-size: 4em;
+  margin: 0;
+  text-shadow: -2px -2px white;
+}
+
+h2 {
+  color: #009085;
+  font-size: 2.5em;
+  margin: 0;
+  text-shadow: -1px -1px white;
+  border-bottom: 10px dotted white;
+}
+
+h3 {
+  font-size: 2em;
+  border-bottom: 10px dotted #ff6842;
+}
+
+h4 {
+  font-size: 2em;
+  margin: 0.5em;
+  width: 25%;
+  border-bottom: 10px dotted #ff6842;
+}
+
+.inLine {
+  display: inline-block;
+}
+
+label {
+  font-size: 1.3em;
+}
+
 table {
+  font-family: 'Josefin Slab', serif;
   margin: 1em;
   padding: 0px;
-  border: 1px solid black;
   border-spacing: 0;
+  box-shadow: 0px 0px 10px #888888;
 }
 
 th {
   border: 1px solid black;
+  background: #00d8c8;
+  padding: 0.4em;
 }
 
 tr {
   padding: 0;
   border: 1px solid black;
-  background: #617DB3;
-  color: darkblue;
+  background: white;
+  color: #ff6842;
 }
 
 td {
   border: 1px solid black;
-  background: lightgray;
   color: black;
+  padding: 0.4em;
+}
+
+.sales-section {
+  text-align: center;
 }
 
 .feildBox {
   width: 45%;
-
+  padding: 1em;
 }
 
 .button {
-  background: aqua;
-  border: 1px solid black;
-  border-radius: 10px;
+  color: #00d8c8;
+  border: 1px solid #00d8c8;
+  border-radius: 1em;
+  padding: 0.8em;
+  background: white;
+  font-family: 'Josefin Slab', serif;
+  font-size: 1em;
+  margin: 1em;
+  transition: background-color 0.1s ease-out;
+}
+
+.button:hover {
+  background-color: #00d8c8;
+  color: white;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+}
+
+.home {
+  color: #ff6842;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.home:hover {
+  color: #00d8c8;
 }
