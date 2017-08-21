@@ -1,4 +1,30 @@
+/*GOOGLE FONTS
+font-family: 'Amatic SC', cursive;
+font-family: 'Josefin Slab', serif; */
+
+body {
+  font-family: 'Amatic SC', cursive;
+}
+
+header {
+  text-align: center;
+  background: #00d8c8;
+  margin-top: -1.5em;
+  margin-left: -0.5em;
+  width: 100%;
+  padding: 2em;
+}
+
+.inLine {
+  display: inline-block;
+}
+
+.title {
+
+}
+
 table {
+  font-family: 'Josefin Slab', serif;
   margin: 1em;
   padding: 0px;
   border: 1px solid black;

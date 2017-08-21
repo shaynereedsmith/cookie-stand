@@ -3,12 +3,19 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="sales.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Slab" rel="stylesheet">
     <title>Salmon Cookie Stand</title>
   </head>
   <body>
-    <h1>Salmon Cookie Sales</h1>
+    <header>
+      <div class="title inLine">
+        <h1>Salmon Cookie Sales</h1>
+        <h2>Sales Report</h2>
+      </div>
+      <img class="inLine" src="salmonfish.png" width="300px"/>
+    </header>
     <div class="feildBox">
-      <h2>Create New Store: </h2>
+      <h3>Create New Store: </h3>
       <form id="theForm">
         <div class="storeNameStyle">
           <label for="name">Store Name
@@ -27,13 +34,11 @@
           <input type="number" name="avgCookies" class="" placeholder="Average Cookies per Customer" step="0.1" required />
         </div>
         <input type="submit" value="Add store" id="submit" class="button"/>
-        </div>
+      </div>
       </form>
       <h2>List of Stores</h2>
-
     <div id="sales-section"></div>
-
- </body>
+   </body>
   <script src="app.js" type="text/javascript" >
  </script>
 </html>
