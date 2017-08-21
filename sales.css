@@ -104,3 +104,13 @@ td {
 footer {
   text-align: center;
 }
+
+.home {
+  color: #ff6842;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.home:hover {
+  color: #00d8c8;
+}
